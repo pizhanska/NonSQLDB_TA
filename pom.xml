@@ -12,7 +12,21 @@
         <dependency>
             <groupId>com.lordofthejars</groupId>
             <artifactId>nosqlunit-mongodb</artifactId>
-            <version>0.7.0</version>
+            <version>LATEST</version>
+        </dependency>
+        <dependency>
+            <groupId>sample</groupId>
+            <artifactId>com.sample</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/mongo-java-driver-3.4.2.jar</systemPath>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
