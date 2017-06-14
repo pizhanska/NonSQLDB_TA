@@ -4,6 +4,7 @@ import com.mentorship.db.model.Book;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
+import com.mongodb.client.MongoCollection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,6 @@ public class BookManager {
 
 
     public List<Book> findAll() {
-
         List<Book> books = new ArrayList<Book>();
         DBCursor findAll = booksCollection.find();
 
@@ -35,4 +35,16 @@ public class BookManager {
         }
         return books;
     }
+
+    public void delete(DBObject object){
+        booksCollection.remove(object);
+    }
+
+    public void update(DBObject old, DBObject updated){
+        booksCollection.update(old,updated);
+    }
+
+
+
+
 }
