@@ -18,3 +18,5 @@ test-output/
 target/
 *.log
 *.exe
+/mongo-java-driver-3.4.2.jar
+src/main/resources/
