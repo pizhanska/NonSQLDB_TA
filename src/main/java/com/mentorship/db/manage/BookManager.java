@@ -9,13 +9,14 @@ import com.mongodb.DBObject;
  */
 public class BookManager {
     private DBCollection booksCollection;
+    private MongoBook mongoBook =  new MongoBook();
 
     public BookManager(DBCollection booksCollection) {
         this.booksCollection = booksCollection;
     }
 
     public void create(Book book) {
-        DBObject dbObject = MONGO_DB_BOOK_CONVERTER.convert(book);
+        DBObject dbObject = mongoBook.convert(book);
         booksCollection.insert(dbObject);
     }
 }
