@@ -38,6 +38,16 @@ public class Book {
     public void setWasPublished(int wasPublished) {
         this.wasPublished = wasPublished;
     }
+
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", wasPublished=" + wasPublished +
+                '}';
+    }
 }
 
 
