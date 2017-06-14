@@ -24,4 +24,16 @@ public class MongoBook implements Converter<Book,DBObject> {
 
         return dbObject;
     }
+
+    public Book convert(DBObject dbObject) {
+
+        String title = (String) dbObject.get(TITLE_FIELD);
+        String author = (String) dbObject.get(AUTHOR_FIELD);
+        int wasPublished = (Integer) dbObject.get(WAS_PUBLISHED_FIELD);
+
+        return new Book(title, author, wasPublished);
+
+    }
+
+
 }
